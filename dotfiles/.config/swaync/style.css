@@ -1,0 +1,8 @@
+@import 'colors/one-dark.css';
+@import 'themes/nova-dark/notifications.css';
+@import 'themes/nova-dark/central_control.css';
+
+/* widget specific styling */
+@import 'widgets/mpris-styles.css';
+
+
