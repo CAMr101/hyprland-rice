@@ -18,6 +18,7 @@
         "clock"
     ],
     "modules-right": [
+        "mpd",
         "pulseaudio",
         // "cpu",
         "memory",
@@ -60,9 +61,14 @@
         "tooltip-format": "{app}: {title}"
     },
     "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+        // "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon} {artist:10} - {title:20} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) {volume}% ",
+        "format": "{stateIcon} {artist} - {title} ({elapsedTime:%M:%S}) ",
+        "max-length": 100,
+        "artist-len": 25,
+        "title-len": 25,
+        "ellipsis": "...",
         "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "format-stopped": "{consumeIcon} {repeatIcon} {singleIcon} Stopped ",
         "unknown-tag": "N/A",
         "interval": 5,
         "consume-icons": {
