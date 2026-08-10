@@ -1,4 +1,5 @@
 /* @import "colors.css"; */
+@import "colors/one-dark.css";
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
@@ -92,7 +93,6 @@ button:hover {
 #bluetooth,
 #pulseaudio,
 #wireplumber,
-#custom-media,
 #tray,
 #mode,
 #idle_inhibitor,
@@ -103,6 +103,11 @@ button:hover {
     color: #ffffff;
     border-radius: 25px;
     /* align-items: center; */
+}
+
+#custom-notification{
+    color: @orange;
+    margin-right: 10px;
 }
 
 #window,

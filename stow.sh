@@ -1,0 +1,1 @@
+stow -d ~/Projects/hyprland-rice -t ~/ dotfiles
