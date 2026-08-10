@@ -106,7 +106,7 @@ button:hover {
 }
 
 #custom-notification{
-    color: @orange;
+    margin-left: 10px;
     margin-right: 10px;
     font-family: "JetBrainsMono Nerd Font Propo", "Noto Sans CJK JP", "Noto Sans CJK KR", Roboto, Helvetica, Arial, sans-serif;
 }
@@ -134,6 +134,7 @@ button:hover {
 } */
 
 #battery {
+    /* background-color: #ffffff; */
     background-color: #ffffff;
     color: #000000;
 }
