@@ -98,6 +98,7 @@ button:hover {
 #idle_inhibitor,
 #scratchpad,
 #power-profiles-daemon,
+#mpris,
 #mpd {
     padding: 0 10px;
     color: #ffffff;
@@ -277,6 +278,16 @@ label:focus {
 #idle_inhibitor.activated {
     background-color: #ecf0f1;
     color: #2d3436;
+}
+
+#mpris {
+    color: #a6e3a1; /* Catppuccin Green style */
+    background-color: @bg4;
+    padding: 0 12px;
+}
+
+#mpris.paused {
+    color: @fg; /* Dim the text color when paused */
 }
 
 #mpd {

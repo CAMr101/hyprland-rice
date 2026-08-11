@@ -18,7 +18,8 @@
         "clock"
     ],
     "modules-right": [
-        "mpd",
+        // "mpd",
+        "mpris",
         "pulseaudio",
         // "cpu",
         "memory",
@@ -60,15 +61,41 @@
         "tooltip": true,
         "tooltip-format": "{app}: {title}"
     },
+    "mpris": {
+        "format": "{status_icon} {artist} - {title} ",
+        "format-paused": "{status_icon} <i>{artist} - {title}</i> ",
+        "artist-len": 15,
+        "title-len": 20,
+        "ellipsis": "...",
+        "player-icons": {
+            "default": "▶",
+            "mpv": "🎵"
+        },
+        "status-icons": {
+            "paused": "",
+            "playing": "",
+            "stopped": "  "
+        },
+        
+        // Optional: Only show if mpDris2 or RMPC is active
+        // "player-appearance": {
+        //     "mpdris2": "compact"
+        // },
+        // Mouse button controls
+        "on-click": "playerctl play-pause",
+        // "on-scroll-up": "playerctl next",
+        // "on-scroll-down": "playerctl prev"
+    },
     "mpd": {
         // "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon} {artist:10} - {title:20} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) {volume}% ",
-        "format": "{stateIcon} {artist} - {title} ({elapsedTime:%M:%S}) ",
+        "format": "{stateIcon} {artist} - {title} ({elapsedTime:%M:%S})  ",
         "max-length": 100,
         "artist-len": 25,
         "title-len": 25,
         "ellipsis": "...",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon} {repeatIcon} {singleIcon} Stopped ",
+        "format-disconnected": "Disconnected  ",
+        // "format-stopped": " 󰝛 ",
+        "format-stopped": "",
         "unknown-tag": "N/A",
         "interval": 5,
         "consume-icons": {
@@ -82,7 +109,7 @@
             "on": " "
         },
         "single-icons": {
-            "on": "1 "
+            "on": " 1 "
         },
         "state-icons": {
             "paused": "",
