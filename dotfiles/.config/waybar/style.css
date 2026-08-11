@@ -1,5 +1,6 @@
 /* @import "colors.css"; */
 @import "colors/one-dark.css";
+@import "colors/josean-dev-colors.css";
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
@@ -361,7 +362,8 @@ label:focus {
 }
 
 #media {
-  color: #66cc99;
+  /* color: #66cc99; */
+  color: @fg;
   margin: 7px 0px 7px 80px;
 }
 
@@ -374,7 +376,28 @@ label:focus {
   margin-right: 10px;
 }
 
-#custom-media-time {
-  color: rgba(113, 113, 122, 1);
+#custom-media-time{
+  color: @dark-5;
   font-size: 14px;
+}
+
+#custom-media-unified{
+     background-color: rgba(26, 27, 38, 0.65); /* Dark transparent workspace color */
+    color: #ffffff;                           /* Soft lavender text */
+    border-radius: 8px;
+    padding: 2px 12px;
+    margin: 4px 6px;
+    border: 1px solid rgba(122, 162, 247, 0.3); /* Subtle blue border */
+    transition: all 0.3s ease;
+}
+
+#custom-media-unified.playing{
+    color: #7aa2f7;                           /* Bright blue text */
+    border-color: #7aa2f7;                    /* Bright border */
+    box-shadow: 0 0 10px rgba(122, 162, 247, 0.4);                           /* Cyan tint when active */
+}
+
+#custom-media-unified.paused {
+      color: #565f89;                           /* Faded grey-blue */
+    border-color: rgba(86, 95, 137, 0.3);                       /* Visual cue for paused state */
 }

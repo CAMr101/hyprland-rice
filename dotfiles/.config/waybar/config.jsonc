@@ -19,7 +19,9 @@
     ],
     "modules-right": [
         // "mpd",
-        "mpris",
+        // "mpris",
+        "group/media",
+        // "custom/media-unified",
         "pulseaudio",
         // "cpu",
         "memory",
@@ -67,6 +69,8 @@
         "artist-len": 15,
         "title-len": 20,
         "ellipsis": "...",
+        "ignored-players": ["firefox", "chromium", "brave", "spotify"],
+        "interval": 2,
         "player-icons": {
             "default": "▶",
             "mpv": "🎵"
@@ -284,5 +288,42 @@
         "on-click": "swaync-client -t -sw",
         "on-click-right": "swaync-client -d -sw",
         "escape": true
-  }
+  },
+  //   Custom "now playing" module
+  "group/media": {
+      "orientation": "horizontal",
+      "modules": [
+        // "custom/media-animation",
+        "custom/media-now-playing"
+        // "custom/media-time"
+      ]
+    },
+    "custom/media-now-playing": {
+      "exec": "~/.config/waybar/custom_modules/media/media-now-playing.sh",
+      "escape": true,
+      "tooltip": false,
+      "on-click": "kitty --class rmpc-floating -e rmpc",
+      "on-click-middle": "playerctl previous",
+      "on-click-right": "playerctl next"
+    },
+    // "custom/media-animation": {
+    //   "exec": "~/.config/waybar/custom_modules/media/media-animation.sh",
+    //   "tooltip": false
+    // },
+    // "custom/media-time": {
+    //   "exec": "~/.config/waybar/custom_modules/media/media-time.sh",
+    //   "escape": true,
+    //   "tooltip": false
+    // },
+    // "custom/media-unified": {
+    //   "exec": "~/.config/waybar/custom_modules/media/media-unified.sh",
+    //   "return-type": "json",
+    //   "escape": true,
+    //   "tooltip": false,
+    //   "on-click": "playerctl play-pause",
+    //   "on-click-middle": "playerctl previous",
+    //   "on-click-right": "playerctl next"
+    // }
+
+
 }

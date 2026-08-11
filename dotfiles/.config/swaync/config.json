@@ -65,7 +65,8 @@
       "image-radius": 12,
       "autohide": false,
       "show-album-art": "always",
-      "loop-carousel": true
+      "loop-carousel": true,
+      "blacklist": ["playerctl"] 
     },
     "volume": {
       "label": "󰕾",
