@@ -304,8 +304,21 @@
       "tooltip": false,
       "on-click": "kitty --class rmpc-floating -e rmpc",
       "on-click-middle": "playerctl previous",
-      "on-click-right": "playerctl next"
+      "on-click-right": "playerctl next",
+
+      "continuous": true,
+      "lazy": true
     },
+    "custom/media-play-pause":{
+        "format":"",
+        "tooltip": false,
+        "on-click":"playerctl -p playerctld stop"
+    },
+    "custom/media-stop":{
+        "format":"",
+        "tooltip": false,
+        "on-click":"playerctl -p playerctld stop"
+    }
     // "custom/media-animation": {
     //   "exec": "~/.config/waybar/custom_modules/media/media-animation.sh",
     //   "tooltip": false
